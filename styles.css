@@ -301,14 +301,17 @@ button { font: inherit; cursor: pointer; }
 
 .nav-toggle {
   display: none;
-  width: 42px; height: 42px;
-  border: 1px solid rgba(25,41,56,0.12);
+  width: 40px; height: 40px;
+  border: none;
   background: transparent;
   border-radius: 8px;
   flex-direction: column;
   justify-content: center; align-items: center;
-  gap: 4px; padding: 0;
+  gap: 5px; padding: 0;
+  transition: background .2s var(--ease-out);
 }
+.nav-toggle:hover { background: rgba(25,41,56,0.05); }
+.nav-toggle:active { background: rgba(25,41,56,0.08); }
 .nav-toggle span { width: 18px; height: 2px; background: var(--primary); transition: transform .2s var(--ease-out), opacity .2s; }
 .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
 .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
@@ -1473,8 +1476,8 @@ button { font: inherit; cursor: pointer; }
 
 /* Smartphones */
 @media (max-width: 640px) {
-  :root { --container-pad: 18px; --navbar-height: 72px; }
-  .nav-row { min-height: 72px; gap: 12px; }
+  :root { --container-pad: 22px; --navbar-height: 72px; }
+  .nav-row { min-height: 72px; gap: 8px; }
   .logo { gap: 10px; }
   .logo__mark { width: 42px; height: 42px; }
   .logo__title { font-size: 0.7rem; letter-spacing: 0.1em; }
@@ -1482,6 +1485,7 @@ button { font: inherit; cursor: pointer; }
 
   .btn { padding: 14px 22px; font-size: 0.95rem; }
   .btn--ghost-dark { padding: 9px 14px; font-size: 0.74rem; }
+  .primary-nav { margin-right: 2px; }
 
   /* Hero */
   .hero { padding-block: 56px 64px; }
