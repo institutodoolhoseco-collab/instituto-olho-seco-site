@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /privacidade
+Disallow: /termos
+
+Sitemap: https://www.institutodoolhoseco.com.br/sitemap.xml
