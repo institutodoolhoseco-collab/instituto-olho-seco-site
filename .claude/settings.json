@@ -41,7 +41,20 @@
       "Bash(curl -s -o /dev/null -w \"logo.jpg: %{http_code}\\\\n\" http://localhost:5501/logo.jpg)",
       "Bash(curl -s -o /dev/null -w \"logo.png: %{http_code}\\\\n\" http://localhost:5501/logo.png)",
       "WebFetch(domain:www.institutodoolhoseco.com.br)",
-      "Bash(node --check script.js)"
+      "Bash(node --check script.js)",
+      "Skill(run)",
+      "Skill(run:*)",
+      "Bash(python -m http.server 8123)",
+      "Bash(echo \"started with pid $!\")",
+      "Bash(curl -sf http://localhost:8123/ipl-o-que-e.html)",
+      "Bash(break)",
+      "Read(//tmp/**)",
+      "Bash(npx --yes chromium-cli --help)",
+      "Bash(npm ls *)",
+      "Bash(node -e \"require.resolve\\('playwright'\\)\")",
+      "Bash(curl -s -o /tmp/ipl.html -w \"HTTP %{http_code}\\\\n\" http://localhost:8123/ipl-o-que-e.html)",
+      "Bash(curl -sL -o /tmp/ipl.html -w \"HTTP %{http_code}\\\\n\" http://localhost:8123/ipl-o-que-e.html)",
+      "Bash(cd \"c:\\\\Users\\\\della\\\\Documents\\\\projetos\\\\instituto-olho-seco-site\" *)"
     ],
     "additionalDirectories": [
       "C:\\Users\\della\\Downloads"
