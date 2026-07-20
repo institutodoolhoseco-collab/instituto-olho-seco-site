@@ -115,8 +115,25 @@
         <img src="logo.png" alt="Instituto do Olho Seco" class="nav__logo-icon" width="1027" height="220" />
       </a>
       <ul class="nav__links" role="list">
-        <li><a href="a-clinica.html">A Clínica</a></li>
-        <li><a href="index.html#sintomas">Sintomas</a></li>
+        <li class="nav__item--dropdown">
+          <a href="a-clinica.html" class="nav__dropdown-toggle">
+            A Clínica
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <ul class="nav__dropdown" role="list">
+            <li><a href="https://www.institutodoolhoseco.com.br/oquefazemos">O que Fazemos</a></li>
+          </ul>
+        </li>
+        <li class="nav__item--dropdown">
+          <a href="index.html#sintomas" class="nav__dropdown-toggle">
+            Sintomas
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <ul class="nav__dropdown" role="list">
+            <li><a href="https://www.institutodoolhoseco.com.br/oolhoseco">O Olho Seco</a></li>
+            <li><a href="https://www.institutodoolhoseco.com.br/blog">Blog</a></li>
+          </ul>
+        </li>
         <li class="nav__item--dropdown">
           <a href="index.html#diagnostico" class="nav__dropdown-toggle">
             Diagnóstico
@@ -135,7 +152,15 @@
             <li><a href="ipl-o-que-e.html" aria-current="page">O que é IPL?</a></li>
           </ul>
         </li>
-        <li><a href="index.html#equipe">Equipe</a></li>
+        <li class="nav__item--dropdown">
+          <a href="index.html#equipe" class="nav__dropdown-toggle">
+            Equipe
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <ul class="nav__dropdown" role="list">
+            <li><a href="https://www.institutodoolhoseco.com.br/corpoclinico">Corpo Clínico</a></li>
+          </ul>
+        </li>
         <li><a href="index.html#unidades">Unidades</a></li>
       </ul>
       <div class="nav__cta">
@@ -184,41 +209,58 @@
 <!-- ═══════════════════ 01 · MECANISMO ═══════════════════ -->
 <section class="section section--off" aria-labelledby="mec-title">
   <div class="container">
-    <div class="section-num-head">
-      <span class="section-num">01</span>
-      <h2 class="display display-lg" id="mec-title" style="color:var(--navy)">O mecanismo científico</h2>
-    </div>
-    <p class="body-lg" style="color:var(--text-muted);margin-top:16px;max-width:760px">
-      O IPL não trata o olho diretamente — ele atua na pele da pálpebra inferior e nas regiões periorbitais, onde ficam as aberturas das glândulas de Meibômio. Três efeitos acontecem simultaneamente durante cada pulso de luz:
-    </p>
+    <div class="article-layout">
+      <div>
+        <div class="section-num-head">
+          <span class="section-num">01</span>
+          <h2 class="display display-lg" id="mec-title" style="color:var(--navy)">O mecanismo científico</h2>
+        </div>
+        <p class="body-lg" style="color:var(--text-muted);margin-top:16px;max-width:760px">
+          O IPL não trata o olho diretamente — ele atua na pele da pálpebra inferior e nas regiões periorbitais, onde ficam as aberturas das glândulas de Meibômio. Três efeitos acontecem simultaneamente durante cada pulso de luz:
+        </p>
 
-    <div class="mechanism-grid" role="list" style="margin-top:40px">
-      <div class="mechanism-card" role="listitem">
-        <div class="mechanism-card__icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        <div class="mechanism-grid" role="list" style="margin-top:40px">
+          <div class="mechanism-card" role="listitem">
+            <div class="mechanism-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <p class="mechanism-card__title">Fototermólise seletiva de vasos anormais</p>
+            <p class="mechanism-card__text">A luz é absorvida pela hemoglobina em pequenos vasos sanguíneos dilatados (telangiectasias) na pálpebra, comuns em quadros de blefarite crônica. Isso reduz a liberação local de mediadores inflamatórios.</p>
+          </div>
+          <div class="mechanism-card" role="listitem">
+            <div class="mechanism-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2.5s7 7.58 7 12.5a7 7 0 01-14 0c0-4.92 7-12.5 7-12.5z"/></svg>
+            </div>
+            <p class="mechanism-card__title">Liquefação da secreção lipídica</p>
+            <p class="mechanism-card__text">O calor gerado pela luz amolece o meibum — a substância oleosa que, quando espessada, entope as glândulas e impede a lubrificação adequada do olho.</p>
+          </div>
+          <div class="mechanism-card" role="listitem">
+            <div class="mechanism-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg>
+            </div>
+            <p class="mechanism-card__title">Redução da carga inflamatória e microbiana</p>
+            <p class="mechanism-card__text">Estudos apontam efeito sobre bactérias e ácaros (Demodex) associados à disfunção meibomiana, além de redução direta de citocinas inflamatórias na superfície ocular.</p>
+          </div>
         </div>
-        <p class="mechanism-card__title">Fototermólise seletiva de vasos anormais</p>
-        <p class="mechanism-card__text">A luz é absorvida pela hemoglobina em pequenos vasos sanguíneos dilatados (telangiectasias) na pálpebra, comuns em quadros de blefarite crônica. Isso reduz a liberação local de mediadores inflamatórios.</p>
-      </div>
-      <div class="mechanism-card" role="listitem">
-        <div class="mechanism-card__icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2.5s7 7.58 7 12.5a7 7 0 01-14 0c0-4.92 7-12.5 7-12.5z"/></svg>
-        </div>
-        <p class="mechanism-card__title">Liquefação da secreção lipídica</p>
-        <p class="mechanism-card__text">O calor gerado pela luz amolece o meibum — a substância oleosa que, quando espessada, entope as glândulas e impede a lubrificação adequada do olho.</p>
-      </div>
-      <div class="mechanism-card" role="listitem">
-        <div class="mechanism-card__icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg>
-        </div>
-        <p class="mechanism-card__title">Redução da carga inflamatória e microbiana</p>
-        <p class="mechanism-card__text">Estudos apontam efeito sobre bactérias e ácaros (Demodex) associados à disfunção meibomiana, além de redução direta de citocinas inflamatórias na superfície ocular.</p>
-      </div>
-    </div>
 
-    <p class="body-lg" style="color:var(--text-muted);margin-top:40px;max-width:760px">
-      Em outras palavras: o IPL não "cria" lágrima nova — ele restaura a capacidade das glândulas existentes de produzir a camada oleosa que impede a lágrima de evaporar rápido demais.
-    </p>
+        <p class="body-lg" style="color:var(--text-muted);margin-top:40px;max-width:760px">
+          Em outras palavras: o IPL não "cria" lágrima nova — ele restaura a capacidade das glândulas existentes de produzir a camada oleosa que impede a lágrima de evaporar rápido demais.
+        </p>
+      </div>
+
+      <aside class="toc-card" aria-label="Sumário do artigo">
+        <p class="label toc-card__title">Neste artigo</p>
+        <ol class="toc-card__list">
+          <li><a class="toc-card__link" href="#mec-title">O mecanismo científico</a></li>
+          <li><a class="toc-card__link" href="#ciencia-title">O que a ciência mostra</a></li>
+          <li><a class="toc-card__link" href="#reg-title">Aprovação regulatória</a></li>
+          <li><a class="toc-card__link" href="#proc-title">Como é feito o procedimento</a></li>
+          <li><a class="toc-card__link" href="#ind-title">Indicações e contraindicações</a></li>
+          <li><a class="toc-card__link" href="#faq-title">Perguntas frequentes</a></li>
+          <li><a class="toc-card__link" href="#refs-title">Referências científicas</a></li>
+        </ol>
+      </aside>
+    </div>
   </div>
 </section>
 
@@ -351,7 +393,7 @@
 </section>
 
 <!-- ═══════════════════ 06 · PERGUNTAS FREQUENTES ═══════════════════ -->
-<section class="faq-section" aria-label="Perguntas frequentes">
+<section class="faq-section" aria-label="Perguntas frequentes" id="faq-title">
   <div class="faq-wrap">
     <div class="faq-heading">
       <span class="faq-eyebrow">Tire suas dúvidas</span>

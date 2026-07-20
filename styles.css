@@ -775,6 +775,37 @@
     .section-num-head { display: flex; align-items: baseline; gap: 14px; }
     .section-num { font-weight: 700; font-size: 1.15rem; color: var(--amber); flex-shrink: 0; }
 
+    /* ── ARTIGO COM SIDEBAR (SUMÁRIO) ────────────────────────────── */
+    .article-layout {
+      display: grid;
+      grid-template-columns: 1fr 260px;
+      gap: 56px;
+      align-items: start;
+    }
+    .toc-card {
+      position: sticky;
+      top: 96px;
+      background: var(--off-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 24px 22px;
+    }
+    .toc-card__title { margin-bottom: 14px; }
+    .toc-card__list { display: flex; flex-direction: column; }
+    .toc-card__link {
+      display: block;
+      padding: 11px 0;
+      border-top: 1px solid var(--border);
+      font-size: .88rem;
+      font-weight: 500;
+      color: var(--navy);
+      line-height: 1.4;
+      transition: color .18s, padding-left .18s;
+    }
+    .toc-card__list li:first-child .toc-card__link { border-top: none; }
+    .toc-card__link:hover, .toc-card__link:focus-visible { color: var(--amber); padding-left: 4px; }
+    #mec-title, #ciencia-title, #reg-title, #proc-title, #ind-title, #faq-title, #refs-title { scroll-margin-top: 92px; }
+
     .mechanism-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -1168,6 +1199,8 @@
       .diag-features { grid-template-columns: 1fr; gap: 24px; }
       .ipl-hero { grid-template-columns: 1fr; gap: 48px; }
       .mechanism-grid { grid-template-columns: repeat(2, 1fr); }
+      .article-layout { grid-template-columns: 1fr; }
+      .toc-card { position: static; }
       .doctors-grid { grid-template-columns: repeat(2, 1fr); }
       .unidades-grid { grid-template-columns: repeat(2, 1fr); }
       .symptoms-grid { grid-template-columns: repeat(2, 1fr); }

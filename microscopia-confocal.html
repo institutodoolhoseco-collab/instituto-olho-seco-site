@@ -82,8 +82,25 @@
         <img src="logo.png" alt="Instituto do Olho Seco" class="nav__logo-icon" width="1027" height="220" />
       </a>
       <ul class="nav__links" role="list">
-        <li><a href="a-clinica.html">A Clínica</a></li>
-        <li><a href="index.html#sintomas">Sintomas</a></li>
+        <li class="nav__item--dropdown">
+          <a href="a-clinica.html" class="nav__dropdown-toggle">
+            A Clínica
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <ul class="nav__dropdown" role="list">
+            <li><a href="https://www.institutodoolhoseco.com.br/oquefazemos">O que Fazemos</a></li>
+          </ul>
+        </li>
+        <li class="nav__item--dropdown">
+          <a href="index.html#sintomas" class="nav__dropdown-toggle">
+            Sintomas
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <ul class="nav__dropdown" role="list">
+            <li><a href="https://www.institutodoolhoseco.com.br/oolhoseco">O Olho Seco</a></li>
+            <li><a href="https://www.institutodoolhoseco.com.br/blog">Blog</a></li>
+          </ul>
+        </li>
         <li class="nav__item--dropdown">
           <a href="index.html#diagnostico" class="nav__dropdown-toggle">
             Diagnóstico
@@ -102,7 +119,15 @@
             <li><a href="ipl-o-que-e.html">O que é IPL?</a></li>
           </ul>
         </li>
-        <li><a href="index.html#equipe">Equipe</a></li>
+        <li class="nav__item--dropdown">
+          <a href="index.html#equipe" class="nav__dropdown-toggle">
+            Equipe
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <ul class="nav__dropdown" role="list">
+            <li><a href="https://www.institutodoolhoseco.com.br/corpoclinico">Corpo Clínico</a></li>
+          </ul>
+        </li>
         <li><a href="index.html#unidades">Unidades</a></li>
       </ul>
       <div class="nav__cta">
