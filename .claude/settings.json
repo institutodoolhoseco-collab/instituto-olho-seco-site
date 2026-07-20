@@ -54,7 +54,8 @@
       "Bash(node -e \"require.resolve\\('playwright'\\)\")",
       "Bash(curl -s -o /tmp/ipl.html -w \"HTTP %{http_code}\\\\n\" http://localhost:8123/ipl-o-que-e.html)",
       "Bash(curl -sL -o /tmp/ipl.html -w \"HTTP %{http_code}\\\\n\" http://localhost:8123/ipl-o-que-e.html)",
-      "Bash(cd \"c:\\\\Users\\\\della\\\\Documents\\\\projetos\\\\instituto-olho-seco-site\" *)"
+      "Bash(cd \"c:\\\\Users\\\\della\\\\Documents\\\\projetos\\\\instituto-olho-seco-site\" *)",
+      "Bash(awk '{ print length, NR }' index.html)"
     ],
     "additionalDirectories": [
       "C:\\Users\\della\\Downloads"
