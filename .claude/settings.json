@@ -1,0 +1,50 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -n \"^</html>$\\\\|^</body>$\" \"/c/Users/della/Downloads/ios-landing_27.html\")",
+      "Bash(sed -n 15,950p /c/Users/della/Downloads/ios-landing_27.html)",
+      "Bash(echo \"\")",
+      "Bash(echo \"/* ── Testimonials section \\(scoped\\) ── */\")",
+      "Bash(sed -n 1541,1704p /c/Users/della/Downloads/ios-landing_27.html)",
+      "Bash(sed -n 1731,1885p /c/Users/della/Downloads/ios-landing_27.html)",
+      "Bash(sed -n 1975,2008p /c/Users/della/Downloads/ios-landing_27.html)",
+      "Bash(npx --yes serve -l 5501 .)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:5501)",
+      "Bash(curl -s http://localhost:5501/styles.css -o /dev/null -w \"styles.css: %{http_code}\\\\n\")",
+      "Bash(curl -s http://localhost:5501/script.js -o /dev/null -w \"script.js: %{http_code}\\\\n\")",
+      "Bash(curl -s -o /dev/null -w \"index: %{http_code}\\\\n\" http://localhost:5501)",
+      "Bash(curl -s -o /dev/null -w \"styles.css: %{http_code}\\\\n\" http://localhost:5501/styles.css)",
+      "Bash(curl -s -o /dev/null -w \"script.js: %{http_code}\\\\n\" http://localhost:5501/script.js)",
+      "Bash(start \"\" \"http://localhost:5501\")",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(python3 -c ' *)",
+      "Bash(node -e ' *)",
+      "Bash(find /c/Users/della/AppData/Local/Temp/claude -iname \"*.png\" -newermt \"2026-07-20\" 2>/dev/null | head -20 *)",
+      "Read(//c/Users/della/AppData/Local/Temp/claude/**)",
+      "Read(//c/Users/della/AppData/Local/Temp/**)",
+      "Bash(find /c/Users/della/AppData/Local/Temp -maxdepth 3 \\\\\\( -iname \"*.png\" -o -iname \"*.jpg\" -o -iname \"*.jpeg\" \\\\\\) -newermt \"2026-07-20 00:00\" 2>/dev/null | head -30)",
+      "Read(//c/Users/della/Pictures/**)",
+      "Bash(magick -version)",
+      "Bash(convert -version)",
+      "Bash(ffmpeg -version)",
+      "Bash(curl -s -o /dev/null -w \"logo-icon.png via server: %{http_code}\\\\n\" http://localhost:5501/logo-icon.png)",
+      "Bash(ls -lat \"/c/Users/della/Pictures/\" 2>&1 | head -10 *)",
+      "Read(//c/Users/della/Pictures//**)",
+      "Bash(xxd \"/c/Users/della/Downloads/lOGO-RODAPE.webp\")",
+      "Bash(cp \"/c/Users/della/Downloads/lOGO-RODAPE.webp\" \"/c/Users/della/instituto-olho-seco/logo.webp\" *)",
+      "Bash(curl -s -o /dev/null -w \"logo.webp: %{http_code}\\\\n\" http://localhost:5501/logo.webp)",
+      "Bash(ls -lat \"/c/Users/della/Downloads/\" 2>&1 | head -8 *)",
+      "Bash(ls -lat \"/c/Users/della/Downloads/\" 2>&1 | head -6 *)",
+      "Bash(cp \"/c/Users/della/Downloads/LOGOTIPO-IOS-site-fundo-transp.jpg\" \"/c/Users/della/instituto-olho-seco/logo.jpg\" *)",
+      "Bash(curl -s -o /dev/null -w \"logo.jpg: %{http_code}\\\\n\" http://localhost:5501/logo.jpg)",
+      "Bash(curl -s -o /dev/null -w \"logo.png: %{http_code}\\\\n\" http://localhost:5501/logo.png)",
+      "WebFetch(domain:www.institutodoolhoseco.com.br)",
+      "Bash(node --check script.js)"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\della\\Downloads"
+    ]
+  }
+}

@@ -188,3 +188,123 @@
       if (btn && btn.getAttribute('aria-expanded') === 'true') toggleMenu(btn);
     });
   });
+
+  // ─────────────────────────────────────────────────────────────
+  // FAQ (Perguntas frequentes) — acordeão
+  // ─────────────────────────────────────────────────────────────
+  (function () {
+    var FAQ_DATA = [
+      {
+        question: "Como posso saber se tenho olho seco?",
+        answer: "Os sintomas de olho seco incluem ressecamento, vermelhidão, ardência ou coceira nos olhos, e às vezes visão embaçada. No entanto, esses sinais também podem indicar outras condições. O ideal é agendar uma consulta com um especialista para um diagnóstico preciso."
+      },
+      {
+        question: "Existe cura para o olho seco?",
+        answer: "Os tratamentos para olho seco aliviam os sintomas e evitam que o quadro se agrave ou se torne crônico. Porém, como geralmente é causado por fatores externos, sempre existe a possibilidade de o problema retornar no futuro."
+      },
+      {
+        question: "Quanto custa o tratamento de olho seco?",
+        answer: "O valor varia de acordo com a gravidade do caso e os procedimentos ou produtos necessários para tratar os sintomas. Um especialista pode indicar as melhores opções de tratamento e os respectivos valores na consulta."
+      },
+      {
+        question: "Como posso prevenir o olho seco?",
+        answer: "Algumas medidas ajudam a reduzir o risco, como limpar e massagear regularmente a margem das pálpebras, usar umidificador de ar, fazer pausas durante o uso prolongado de telas, optar por óculos em vez de lentes de contato e evitar a exposição direta a correntes de ar."
+      },
+      {
+        question: "O tratamento dói?",
+        answer: "A maioria dos procedimentos é indolor ou causa apenas um leve desconforto temporário. Nossa equipe explica cada etapa antes de iniciar e ajusta o atendimento ao seu nível de conforto."
+      },
+      {
+        question: "Qual o melhor tratamento para olho seco?",
+        answer: "Não existe um único melhor tratamento para olho seco - o que funciona melhor depende da causa (se falta água na lágrima, se falta gordura, se há inflamação.etc) e da gravidade do caso, e por isso a avaliação com um oftalmologista especialista no assunto é muito importante."
+      },
+      {
+        question: "Quais tecnologias são usadas para tratar olho seco?",
+        answer: "Até pouco atrás, o tratamento do olho seco se resumia a pingar colírio. Hoje, contamos com equipamentos e exames de alta tecnologia que ajudam a tratar de forma mais direcionada - não apenas aliviar o sintoma. Tecnologia como Luz Intensa Pulsada - IPL, Termopulsação com radiofrequência, Lentes Esclerais, Tampões lacrimais, Soro Autológo e colírios de última geração estão disponíveis."
+      },
+      {
+        question: "Como funciona o tratamento IPL para tratar olho seco?",
+        answer: "O ponto chave é que o IPL funciona melhor quando o olho seco é causado por disfunções das glândulas de Meibômio - por isso a avaliação com exames específicos é o que garante que o tratamento vai realmente resolver a causa do problema, e não só aliviar o sintomo por um tempo."
+      }
+    ];
+
+    function escapeHTML(str) {
+      var div = document.createElement("div");
+      div.textContent = str;
+      return div.innerHTML;
+    }
+
+    var chevronSVG =
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>';
+
+    var list = document.getElementById("faqList");
+    if (!list) return;
+
+    FAQ_DATA.forEach(function (item, index) {
+      var faqItem = document.createElement("div");
+      faqItem.className = "faq-item";
+
+      var qid = "faq-q-" + index;
+      var aid = "faq-a-" + index;
+
+      faqItem.innerHTML =
+        '<button class="faq-question" id="' + qid + '" aria-expanded="false" aria-controls="' + aid + '" type="button">' +
+          '<span>' + escapeHTML(item.question) + '</span>' +
+          '<span class="faq-icon">' + chevronSVG + '</span>' +
+        '</button>' +
+        '<div class="faq-answer-wrap" id="' + aid + '" role="region" aria-labelledby="' + qid + '">' +
+          '<div class="faq-answer"><p>' + escapeHTML(item.answer) + '</p></div>' +
+        '</div>';
+
+      list.appendChild(faqItem);
+    });
+
+    var items = Array.prototype.slice.call(list.children);
+
+    function closeItem(item) {
+      item.classList.remove("is-open");
+      var btn = item.querySelector(".faq-question");
+      var wrap = item.querySelector(".faq-answer-wrap");
+      btn.setAttribute("aria-expanded", "false");
+      wrap.style.maxHeight = "0px";
+    }
+
+    function openItem(item) {
+      item.classList.add("is-open");
+      var btn = item.querySelector(".faq-question");
+      var wrap = item.querySelector(".faq-answer-wrap");
+      btn.setAttribute("aria-expanded", "true");
+      wrap.style.maxHeight = wrap.scrollHeight + "px";
+    }
+
+    items.forEach(function (item) {
+      var btn = item.querySelector(".faq-question");
+      btn.addEventListener("click", function () {
+        var isOpen = item.classList.contains("is-open");
+        items.forEach(function (other) {
+          if (other !== item) closeItem(other);
+        });
+        if (isOpen) {
+          closeItem(item);
+        } else {
+          openItem(item);
+        }
+      });
+    });
+
+    var resizeTimeout;
+    window.addEventListener("resize", function () {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(function () {
+        var openItemEl = list.querySelector(".faq-item.is-open");
+        if (openItemEl) {
+          var wrap = openItemEl.querySelector(".faq-answer-wrap");
+          wrap.style.maxHeight = wrap.scrollHeight + "px";
+        }
+      }, 150);
+    });
+
+    if (items.length > 0) {
+      openItem(items[0]);
+    }
+  })();
