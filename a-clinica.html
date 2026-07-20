@@ -70,8 +70,24 @@
       <ul class="nav__links" role="list">
         <li><a href="a-clinica.html" aria-current="page">A Clínica</a></li>
         <li><a href="index.html#sintomas">Sintomas</a></li>
-        <li><a href="index.html#diagnostico">Diagnóstico</a></li>
-        <li><a href="index.html#ipl">Tratamento IPL</a></li>
+        <li class="nav__item--dropdown">
+          <a href="index.html#diagnostico" class="nav__dropdown-toggle">
+            Diagnóstico
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <ul class="nav__dropdown" role="list">
+            <li><a href="microscopia-confocal.html">Microscopia Confocal</a></li>
+          </ul>
+        </li>
+        <li class="nav__item--dropdown">
+          <a href="index.html#ipl" class="nav__dropdown-toggle">
+            Tratamento IPL
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <ul class="nav__dropdown" role="list">
+            <li><a href="ipl-o-que-e.html">O que é IPL?</a></li>
+          </ul>
+        </li>
         <li><a href="index.html#equipe">Equipe</a></li>
         <li><a href="index.html#unidades">Unidades</a></li>
       </ul>

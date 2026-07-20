@@ -94,6 +94,15 @@
       color: var(--amber);
       transform: translateY(-1px);
     }
+    .btn-ipl-white,
+    .btn-ipl-white:hover,
+    .btn-ipl-white:active,
+    .btn-ipl-white:focus,
+    .btn-ipl-white:visited {
+      background: var(--white);
+      color: var(--navy);
+      border-color: var(--white);
+    }
     .btn-ghost {
       background: transparent;
       color: var(--navy);
@@ -145,6 +154,33 @@
       transition: color .15s;
     }
     .nav__links a:hover { color: var(--amber); }
+    .nav__item--dropdown { position: relative; }
+    .nav__dropdown-toggle { display: inline-flex; align-items: center; gap: 4px; }
+    .nav__dropdown-toggle svg { width: 11px; height: 11px; transition: transform .15s; }
+    .nav__item--dropdown:hover .nav__dropdown-toggle svg,
+    .nav__item--dropdown:focus-within .nav__dropdown-toggle svg { transform: rotate(180deg); }
+    .nav__dropdown {
+      position: absolute;
+      top: calc(100% + 14px);
+      left: 0;
+      min-width: 200px;
+      background: rgba(25,41,56,.98);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 8px;
+      padding: 8px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(4px);
+      transition: opacity .15s, transform .15s, visibility .15s;
+    }
+    .nav__item--dropdown:hover .nav__dropdown,
+    .nav__item--dropdown:focus-within .nav__dropdown {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    .nav__dropdown li a { display: block; padding: 8px 10px; border-radius: 6px; white-space: nowrap; }
+    .nav__dropdown li a:hover { background: rgba(255,255,255,.06); }
     .nav__cta { display: flex; align-items: center; gap: 12px; }
     .nav__hamburger {
       display: none;
@@ -631,6 +667,12 @@
       background: var(--off-white);
       border: 1px solid var(--border);
       border-radius: var(--radius);
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+    .ipl-benefit:hover {
+      border-color: var(--amber);
+      box-shadow: 0 8px 20px rgba(25,41,56,.12);
+      transform: translateY(-3px);
     }
     .ipl-benefit__icon {
       width: 36px; height: 36px;
@@ -661,14 +703,14 @@
     .ipl-vs-item {
       padding: 18px 20px;
       border-radius: var(--radius);
-      border: 1px solid rgba(255,255,255,.08);
+      border: 2px solid rgba(255,255,255,.08);
       transition: transform .2s ease, border-color .2s ease;
     }
     .ipl-vs-item:hover { transform: translateY(-2px); }
-    .ipl-vs-item--bad { background: rgba(224,128,128,.06); border-color: rgba(224,128,128,.18); }
-    .ipl-vs-item--bad:hover { border-color: rgba(224,128,128,.35); }
-    .ipl-vs-item--good { background: rgba(201,166,107,.08); border-color: rgba(201,166,107,.22); }
-    .ipl-vs-item--good:hover { border-color: rgba(201,166,107,.45); }
+    .ipl-vs-item--bad { background: rgba(224,128,128,.06); border-color: rgba(224,128,128,.35); }
+    .ipl-vs-item--bad:hover { border-color: rgba(224,128,128,.55); }
+    .ipl-vs-item--good { background: rgba(201,166,107,.08); border-color: rgba(201,166,107,.4); }
+    .ipl-vs-item--good:hover { border-color: rgba(201,166,107,.6); }
     .ipl-vs-item__head {
       display: flex;
       align-items: center;
@@ -703,9 +745,11 @@
       gap: 20px;
       padding: 20px;
       background: rgba(255,255,255,.03);
-      border: 1px solid rgba(255,255,255,.08);
+      border: 2px solid rgba(255,255,255,.18);
       border-radius: var(--radius);
+      transition: transform .2s ease, border-color .2s ease;
     }
+    .ipl-stat:hover { transform: translateY(-2px); border-color: rgba(255,255,255,.35); }
     .ipl-stat__num {
       font-family: 'Fraunces', serif;
       font-weight: 300;
@@ -724,8 +768,8 @@
       gap: 10px;
       align-items: flex-start;
     }
-    .ipl-card__footer svg { width: 16px; height: 16px; color: rgba(255,255,255,.3); flex-shrink: 0; margin-top: 2px; }
-    .ipl-card__footer p { font-size: .78rem; color: rgba(255,255,255,.35); line-height: 1.6; margin: 0; }
+    .ipl-card__footer svg { width: 16px; height: 16px; color: var(--white); flex-shrink: 0; margin-top: 2px; }
+    .ipl-card__footer p { font-size: .78rem; color: var(--white); line-height: 1.6; margin: 0; }
 
     /* ── MECANISMO CIENTÍFICO ────────────────────────────────────── */
     .section-num-head { display: flex; align-items: baseline; gap: 14px; }
@@ -778,25 +822,51 @@
     .science-stats {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      overflow: hidden;
+      gap: 24px;
       margin-top: 32px;
     }
     .science-stat {
-      padding: 32px 28px;
-      border-right: 1px solid var(--border);
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px 26px;
+      position: relative;
+      overflow: hidden;
+      transition: border-color .2s, box-shadow .25s ease, transform .25s ease;
     }
-    .science-stat:last-child { border-right: none; }
+    .science-stat::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 100%; height: 2px;
+      background: linear-gradient(90deg, var(--amber), transparent);
+      opacity: 0;
+      transition: opacity .2s;
+    }
+    .science-stat:hover {
+      border-color: rgba(201,166,107,.4);
+      box-shadow: 0 12px 32px rgba(25,41,56,.1);
+      transform: translateY(-4px);
+    }
+    .science-stat:hover::after { opacity: 1; }
+    .science-stat__icon {
+      width: 48px; height: 48px;
+      background: rgba(201,166,107,.12);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+    .science-stat__icon svg { width: 24px; height: 24px; color: var(--amber); }
     .science-stat__num {
       font-family: 'Fraunces', serif;
       font-weight: 600;
-      font-size: 2rem;
+      font-size: 1.4rem;
       color: var(--navy);
-      text-align: center;
-      margin-bottom: 14px;
+      margin-bottom: 10px;
     }
-    .science-stat__text { font-size: .88rem; color: var(--text-muted); line-height: 1.6; }
+    .science-stat__text { font-size: .88rem; color: var(--text-muted); line-height: 1.65; }
 
     /* ── MÉDICOS ──────────────────────────────────────────────────── */
     .doctors-grid {
@@ -1107,6 +1177,10 @@
     @media (max-width: 768px) {
       .nav__links, .nav__cta { display: none; }
       .nav__hamburger { display: flex; }
+      .nav__dropdown {
+        position: static; opacity: 1; visibility: visible; transform: none;
+        background: none; border: none; padding: 0 0 0 16px; margin-top: 8px;
+      }
       .section { padding: 64px 0; }
       .symptoms-grid { grid-template-columns: 1fr; }
       .ipl-benefits { grid-template-columns: 1fr; }

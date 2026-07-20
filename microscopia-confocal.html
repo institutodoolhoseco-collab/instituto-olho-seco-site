@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Como Funciona o Tratamento IPL para Olho Seco | Instituto do Olho Seco</title>
-  <meta name="description" content="Guia baseado em evidências científicas sobre o mecanismo da Luz Pulsada Intensa (IPL) no tratamento da disfunção das glândulas de Meibômio, principal causa do olho seco crônico." />
+  <title>Microscopia Confocal: Para Que Serve o Exame | Instituto do Olho Seco</title>
+  <meta name="description" content="Entenda o que é a microscopia confocal, como o exame é feito e em quais casos ele é indicado para avaliar as células da córnea e da superfície ocular." />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -13,15 +13,8 @@
 
   <link rel="stylesheet" href="styles.css" />
   <style>
-    /* ── ARTIGO IPL — estilos específicos desta página ─────────────── */
-    .article-header {
-      position: relative;
-      background:
-        linear-gradient(90deg, rgba(25,41,56,.62) 0%, rgba(25,41,56,.42) 45%, rgba(25,41,56,.1) 100%),
-        url('assets/foto-como-funciona-ipl.jpg') center/cover no-repeat;
-      color: var(--white);
-      padding: 64px 0 56px;
-    }
+    /* ── ARTIGO MICROSCOPIA CONFOCAL — estilos específicos desta página ─── */
+    .article-header { background: var(--navy); color: var(--white); padding: 64px 0 56px; }
     .article-header__meta {
       display: flex; flex-wrap: wrap; gap: 10px 28px;
       margin-top: 28px; padding-top: 24px;
@@ -32,20 +25,6 @@
 
     .article-lede { font-size: 1.05rem; line-height: 1.8; color: var(--text-muted); max-width: 780px; }
     .article-lede + .article-lede { margin-top: 18px; }
-
-    .reg-box {
-      display: flex; gap: 20px; align-items: flex-start;
-      background: var(--off-white); border: 1px solid var(--border);
-      border-radius: var(--radius-lg); padding: 32px;
-      max-width: 900px;
-    }
-    .reg-box__icon {
-      width: 44px; height: 44px; flex-shrink: 0; border-radius: 50%;
-      background: rgba(201,166,107,.15); display: flex; align-items: center; justify-content: center;
-    }
-    .reg-box__icon svg { width: 22px; height: 22px; color: var(--amber); }
-    .reg-box p { color: var(--text-muted); line-height: 1.75; }
-    .reg-box p + p { margin-top: 12px; }
 
     .proc-table { width: 100%; border-collapse: collapse; max-width: 900px; }
     .proc-table tr { border-bottom: 1px solid var(--border); }
@@ -60,7 +39,6 @@
     .indications-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 980px; }
     .indications-card { border-radius: var(--radius-lg); padding: 28px; border: 1px solid var(--border); }
     .indications-card--good { background: rgba(201,166,107,.06); border-color: rgba(201,166,107,.28); }
-    .indications-card--bad { background: rgba(224,128,128,.05); border-color: rgba(224,128,128,.22); }
     .indications-card__head { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
     .indications-card__icon {
       width: 26px; height: 26px; border-radius: 50%; flex-shrink: 0;
@@ -68,19 +46,8 @@
     }
     .indications-card__icon svg { width: 13px; height: 13px; }
     .indications-card--good .indications-card__icon { background: rgba(201,166,107,.25); color: var(--amber); }
-    .indications-card--bad .indications-card__icon { background: rgba(224,128,128,.18); color: #c65858; }
     .indications-card__title { font-weight: 600; font-size: .92rem; color: var(--navy); }
     .indications-card p { font-size: .9rem; color: var(--text-muted); line-height: 1.7; }
-
-    .refs-list { display: flex; flex-direction: column; gap: 12px; max-width: 780px; }
-    .refs-list li {
-      display: flex; gap: 14px; align-items: baseline;
-      padding: 14px 18px; background: var(--off-white); border: 1px solid var(--border);
-      border-radius: var(--radius); font-size: .86rem;
-    }
-    .refs-list .refs-num { color: var(--amber); font-weight: 600; flex-shrink: 0; }
-    .refs-list a { color: var(--navy); word-break: break-all; }
-    .refs-list a:hover { color: var(--amber); }
 
     .author-box {
       display: flex; gap: 20px; align-items: flex-start;
@@ -101,7 +68,7 @@
       .indications-grid { grid-template-columns: 1fr; }
       .proc-table th { width: 130px; }
       .proc-table th, .proc-table td { padding: 14px 10px; font-size: .86rem; }
-      .reg-box, .author-box { flex-direction: column; }
+      .author-box { flex-direction: column; }
     }
   </style>
 </head>
@@ -123,7 +90,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
           </a>
           <ul class="nav__dropdown" role="list">
-            <li><a href="microscopia-confocal.html">Microscopia Confocal</a></li>
+            <li><a href="microscopia-confocal.html" aria-current="page">Microscopia Confocal</a></li>
           </ul>
         </li>
         <li class="nav__item--dropdown">
@@ -132,7 +99,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
           </a>
           <ul class="nav__dropdown" role="list">
-            <li><a href="ipl-o-que-e.html" aria-current="page">O que é IPL?</a></li>
+            <li><a href="ipl-o-que-e.html">O que é IPL?</a></li>
           </ul>
         </li>
         <li><a href="index.html#equipe">Equipe</a></li>
@@ -154,140 +121,52 @@
 <!-- ═══════════════════ CABEÇALHO DO ARTIGO ═══════════════════ -->
 <header class="article-header">
   <div class="container">
-    <p class="label" style="margin-top:44px">Tratamento IPL</p>
+    <p class="label">Exames Especializados</p>
     <h1 class="display display-xl" style="margin-top:14px;max-width:760px">
-      Como Funciona o<br>Tratamento IPL<br>para Olho Seco
+      Microscopia Confocal: Para Que Serve o Exame
     </h1>
-    <p class="body-lg" style="color:#ffffff;margin-top:42px;max-width:680px">
-      Um guia baseado em evidências científicas sobre o mecanismo da Luz Pulsada Intensa no tratamento da disfunção das glândulas de Meibômio — a principal causa do olho seco crônico.
+    <p class="body-lg" style="color:rgba(255,255,255,.6);margin-top:20px;max-width:680px">
+      Um exame de alta precisão que permite observar, em tempo real, as células da córnea e da superfície ocular — sem cortes, biópsias ou dor.
     </p>
     <div class="article-header__meta">
-      <span class="article-header__meta-item">Autora: <strong>Dra. Brenda Biagio Chiacchio</strong> · CRM 117.358 · RQE 46.380</span>
-      <span class="article-header__meta-item">Atualizado em <strong>2 de julho de 2026</strong></span>
-      <span class="article-header__meta-item">Baseado em <strong>7 estudos clínicos + registro FDA</strong></span>
+      <span class="article-header__meta-item">Revisão: <strong>Equipe de Córnea e Superfície Ocular</strong></span>
+      <span class="article-header__meta-item">Atualizado em <strong>20 de julho de 2026</strong></span>
+      <span class="article-header__meta-item">Categoria: <strong>Exames oftalmológicos</strong></span>
     </div>
   </div>
 </header>
 
 <!-- ═══════════════════ RESUMO ═══════════════════ -->
-<section class="section section--tight section--dark" aria-label="Resumo">
+<section class="section section--tight" aria-label="Resumo">
   <div class="container">
-    <p class="article-lede" style="color:rgba(255,255,255,.85)">
-      A Luz Pulsada Intensa (IPL) emite pulsos de luz de amplo espectro sobre a pele ao redor dos olhos para reduzir a inflamação e melhorar a função das glândulas de Meibômio — responsáveis pela camada oleosa do filme lacrimal.
+    <p class="article-lede">
+      A microscopia confocal é um exame de imagem avançado que permite visualizar, em altíssima resolução, as camadas microscópicas da córnea — epitélio, estroma, endotélio e os nervos corneanos — sem qualquer necessidade de cirurgia ou coleta de material.
     </p>
-    <p class="article-lede" style="color:rgba(255,255,255,.85)">
-      Quando essas glândulas funcionam mal, o olho seco piora. É exatamente nesse mecanismo que o IPL atua.
+    <p class="article-lede">
+      Por ser não invasiva, rápida e indolor, essa tecnologia se tornou uma ferramenta indispensável para diagnósticos precisos em oftalmologia, especialmente em casos de infecções, distrofias corneanas e olho seco severo.
     </p>
   </div>
 </section>
 
-<!-- ═══════════════════ 01 · MECANISMO ═══════════════════ -->
-<section class="section section--off" aria-labelledby="mec-title">
+<!-- ═══════════════════ 01 · O QUE É ═══════════════════ -->
+<section class="section section--off" aria-labelledby="oque-title">
   <div class="container">
     <div class="section-num-head">
       <span class="section-num">01</span>
-      <h2 class="display display-lg" id="mec-title" style="color:var(--navy)">O mecanismo científico</h2>
+      <h2 class="display display-lg" id="oque-title" style="color:var(--navy)">O que é a microscopia confocal</h2>
     </div>
     <p class="body-lg" style="color:var(--text-muted);margin-top:16px;max-width:760px">
-      O IPL não trata o olho diretamente — ele atua na pele da pálpebra inferior e nas regiões periorbitais, onde ficam as aberturas das glândulas de Meibômio. Três efeitos acontecem simultaneamente durante cada pulso de luz:
-    </p>
-
-    <div class="mechanism-grid" role="list" style="margin-top:40px">
-      <div class="mechanism-card" role="listitem">
-        <div class="mechanism-card__icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-        </div>
-        <p class="mechanism-card__title">Fototermólise seletiva de vasos anormais</p>
-        <p class="mechanism-card__text">A luz é absorvida pela hemoglobina em pequenos vasos sanguíneos dilatados (telangiectasias) na pálpebra, comuns em quadros de blefarite crônica. Isso reduz a liberação local de mediadores inflamatórios.</p>
-      </div>
-      <div class="mechanism-card" role="listitem">
-        <div class="mechanism-card__icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2.5s7 7.58 7 12.5a7 7 0 01-14 0c0-4.92 7-12.5 7-12.5z"/></svg>
-        </div>
-        <p class="mechanism-card__title">Liquefação da secreção lipídica</p>
-        <p class="mechanism-card__text">O calor gerado pela luz amolece o meibum — a substância oleosa que, quando espessada, entope as glândulas e impede a lubrificação adequada do olho.</p>
-      </div>
-      <div class="mechanism-card" role="listitem">
-        <div class="mechanism-card__icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg>
-        </div>
-        <p class="mechanism-card__title">Redução da carga inflamatória e microbiana</p>
-        <p class="mechanism-card__text">Estudos apontam efeito sobre bactérias e ácaros (Demodex) associados à disfunção meibomiana, além de redução direta de citocinas inflamatórias na superfície ocular.</p>
-      </div>
-    </div>
-
-    <p class="body-lg" style="color:var(--text-muted);margin-top:40px;max-width:760px">
-      Em outras palavras: o IPL não "cria" lágrima nova — ele restaura a capacidade das glândulas existentes de produzir a camada oleosa que impede a lágrima de evaporar rápido demais.
+      Diferente de exames tradicionais que avaliam apenas a superfície do olho, a microscopia confocal enxerga a córnea camada por camada, em nível celular. Isso permite identificar alterações que ainda não são visíveis a olho nu ou em exames convencionais, tornando o diagnóstico mais precoce e mais preciso.
     </p>
   </div>
 </section>
 
-<!-- ═══════════════════ 02 · CIÊNCIA ═══════════════════ -->
-<section class="section" aria-labelledby="ciencia-title">
-  <div class="container">
-    <div class="section-num-head">
-      <span class="section-num">02</span>
-      <h2 class="display display-lg" id="ciencia-title" style="color:var(--navy)">O que a ciência mostra</h2>
-    </div>
-    <p class="body-lg" style="color:var(--text-muted);margin-top:16px;max-width:760px">
-      Estudos clínicos publicados em periódicos revisados por pares (Wiley, ScienceDirect) e indexados no PubMed Central avaliaram o efeito do IPL especificamente em pacientes com disfunção das glândulas de Meibômio, principal causa de olho seco evaporativo.
-    </p>
-
-    <div class="science-stats" role="list">
-      <div class="science-stat" role="listitem">
-        <div class="science-stat__icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>
-        </div>
-        <p class="science-stat__num">3–4 sessões</p>
-        <p class="science-stat__text">em média, no protocolo inicial testado nos estudos</p>
-      </div>
-      <div class="science-stat" role="listitem">
-        <div class="science-stat__icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
-        </div>
-        <p class="science-stat__num">~2–4 semanas</p>
-        <p class="science-stat__text">de intervalo entre sessões nos protocolos clínicos</p>
-      </div>
-      <div class="science-stat" role="listitem">
-        <div class="science-stat__icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg>
-        </div>
-        <p class="science-stat__num">12 meses</p>
-        <p class="science-stat__text">de melhora sintomática sustentada relatada após o protocolo completo</p>
-      </div>
-    </div>
-
-    <p class="body-lg" style="color:var(--text-muted);margin-top:32px;max-width:760px">
-      Os estudos comparam o IPL a tratamentos convencionais — compressas mornas, expressão manual das glândulas e colírios lubrificantes — reportando melhora superior nos escores de sintomas quando o IPL é associado a essas terapias, e não usado isoladamente.
-    </p>
-  </div>
-</section>
-
-<!-- ═══════════════════ 03 · APROVAÇÃO REGULATÓRIA ═══════════════════ -->
-<section class="section section--off" aria-labelledby="reg-title">
-  <div class="container">
-    <div class="section-num-head">
-      <span class="section-num">03</span>
-      <h2 class="display display-lg" id="reg-title" style="color:var(--navy)">Aprovação regulatória</h2>
-    </div>
-
-    <div class="reg-box" style="margin-top:32px">
-      <div class="reg-box__icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l8 4v6c0 5.25-3.5 9.25-8 10-4.5-.75-8-4.75-8-10V6l8-4z"/><polyline points="9 12 11 14 15 10"/></svg>
-      </div>
-      <p>
-        Dispositivos de IPL para tratamento de olho seco por disfunção meibomiana possuem registro específico junto à FDA (Food and Drug Administration dos EUA), com documentação técnica detalhando segurança e desempenho do equipamento (processo DEN200028). No Brasil, o uso segue as normas da Anvisa para dispositivos médicos a laser/luz classe II.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════ 04 · COMO É FEITO O PROCEDIMENTO ═══════════════════ -->
+<!-- ═══════════════════ 02 · COMO É FEITO O EXAME ═══════════════════ -->
 <section class="section" aria-labelledby="proc-title">
   <div class="container">
     <div class="section-num-head">
-      <span class="section-num">04</span>
-      <h2 class="display display-lg" id="proc-title" style="color:var(--navy)">Como é feito o procedimento na prática</h2>
+      <span class="section-num">02</span>
+      <h2 class="display display-lg" id="proc-title" style="color:var(--navy)">Como é feito o exame</h2>
     </div>
 
     <div style="margin-top:32px;overflow-x:auto">
@@ -295,23 +174,23 @@
         <tbody>
           <tr>
             <th scope="row">Duração</th>
-            <td>Cerca de 20 a 30 minutos por sessão.</td>
-          </tr>
-          <tr>
-            <th scope="row">Sensação</th>
-            <td>Leve aquecimento ou um "estalo" rápido de luz; geralmente bem tolerado.</td>
+            <td>Cerca de 10 a 15 minutos.</td>
           </tr>
           <tr>
             <th scope="row">Preparo</th>
-            <td>Remoção de maquiagem e proteção ocular com lentes específicas.</td>
+            <td>Aplicação de colírio anestésico antes do início do exame.</td>
           </tr>
           <tr>
-            <th scope="row">Pós-procedimento</th>
-            <td>Geralmente sem tempo de recuperação; a pele pode ficar levemente rosada por horas.</td>
+            <th scope="row">Procedimento</th>
+            <td>O paciente se posiciona diante do equipamento, de forma semelhante a uma lâmpada de fenda. O microscópio toca suavemente a superfície da córnea com o auxílio de um gel estéril, capturando imagens de alta ampliação das diferentes camadas.</td>
           </tr>
           <tr>
-            <th scope="row">Sessões</th>
-            <td>Protocolo inicial de 3 a 4 sessões, com manutenção posterior conforme resposta.</td>
+            <th scope="row">Sensação</th>
+            <td>Indolor, rápido e não invasivo.</td>
+          </tr>
+          <tr>
+            <th scope="row">Resultado</th>
+            <td>Imagens em tempo real, permitindo avaliação imediata da córnea pelo especialista.</td>
           </tr>
         </tbody>
       </table>
@@ -319,12 +198,12 @@
   </div>
 </section>
 
-<!-- ═══════════════════ 05 · INDICAÇÕES E CONTRAINDICAÇÕES ═══════════════════ -->
+<!-- ═══════════════════ 03 · QUANDO É INDICADA ═══════════════════ -->
 <section class="section section--off" aria-labelledby="ind-title">
   <div class="container">
     <div class="section-num-head">
-      <span class="section-num">05</span>
-      <h2 class="display display-lg" id="ind-title" style="color:var(--navy)">Indicações e contraindicações</h2>
+      <span class="section-num">03</span>
+      <h2 class="display display-lg" id="ind-title" style="color:var(--navy)">Quando o exame é indicado</h2>
     </div>
 
     <div class="indications-grid" style="margin-top:32px">
@@ -333,24 +212,89 @@
           <span class="indications-card__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="4 12 10 18 20 6"/></svg>
           </span>
-          <p class="indications-card__title">Geralmente indicado para</p>
+          <p class="indications-card__title">Ceratites infecciosas</p>
         </div>
-        <p>Olho seco evaporativo associado à disfunção das glândulas de Meibômio, blefarite crônica e rosácea ocular.</p>
+        <p>Identifica diretamente na córnea a presença de bactérias, fungos e protozoários, como a Acanthamoeba, agilizando o diagnóstico e o início do tratamento correto.</p>
       </div>
-      <div class="indications-card indications-card--bad">
+      <div class="indications-card indications-card--good">
         <div class="indications-card__head">
           <span class="indications-card__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="4 12 10 18 20 6"/></svg>
           </span>
-          <p class="indications-card__title">Contraindicado ou requer avaliação em</p>
+          <p class="indications-card__title">Doenças e distrofias corneanas</p>
         </div>
-        <p>Peles muito bronzeadas — fototipos mais altos exigem parâmetros ajustados —, gestantes, uso de fotossensibilizantes e histórico de certas condições dermatológicas. A avaliação prévia com oftalmologista é indispensável.</p>
+        <p>Avalia condições hereditárias e degenerativas, como distrofia de Fuchs, distrofia granular e ceratocone, além de acompanhar a evolução do quadro ao longo do tempo.</p>
+      </div>
+      <div class="indications-card indications-card--good">
+        <div class="indications-card__head">
+          <span class="indications-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="4 12 10 18 20 6"/></svg>
+          </span>
+          <p class="indications-card__title">Acompanhamento pós-operatório</p>
+        </div>
+        <p>Monitora pacientes submetidos a transplante de córnea e a cirurgias como LASIK, avaliando cicatrização, edema, sinais de infecção e regeneração celular.</p>
+      </div>
+      <div class="indications-card indications-card--good">
+        <div class="indications-card__head">
+          <span class="indications-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="4 12 10 18 20 6"/></svg>
+          </span>
+          <p class="indications-card__title">Neuropatia corneana e olho seco</p>
+        </div>
+        <p>Visualiza os nervos da córnea, sendo útil na avaliação de olho seco severo, neuropatia diabética, doenças autoimunes e alterações associadas ao uso prolongado de lentes de contato.</p>
+      </div>
+      <div class="indications-card indications-card--good">
+        <div class="indications-card__head">
+          <span class="indications-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="4 12 10 18 20 6"/></svg>
+          </span>
+          <p class="indications-card__title">Avaliação do endotélio corneano</p>
+        </div>
+        <p>Analisa a contagem e o formato das células endoteliais — relevante em casos de distrofia de Fuchs, uso prolongado de lentes de contato, histórico de cirurgia intraocular e catarata avançada.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════ 06 · PERGUNTAS FREQUENTES ═══════════════════ -->
+<!-- ═══════════════════ 04 · VANTAGENS ═══════════════════ -->
+<section class="section" aria-labelledby="vant-title">
+  <div class="container">
+    <div class="section-num-head">
+      <span class="section-num">04</span>
+      <h2 class="display display-lg" id="vant-title" style="color:var(--navy)">Vantagens do exame</h2>
+    </div>
+
+    <div class="mechanism-grid" role="list" style="margin-top:40px">
+      <div class="mechanism-card" role="listitem">
+        <div class="mechanism-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <p class="mechanism-card__title">Visualização celular em tempo real</p>
+        <p class="mechanism-card__text">Observa a córnea em nível microscópico sem necessidade de biópsia ou qualquer procedimento invasivo.</p>
+      </div>
+      <div class="mechanism-card" role="listitem">
+        <div class="mechanism-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+        </div>
+        <p class="mechanism-card__title">Diagnóstico rápido e preciso</p>
+        <p class="mechanism-card__text">Acelera a identificação de infecções e distrofias corneanas, permitindo tratamento mais direcionado e eficaz.</p>
+      </div>
+      <div class="mechanism-card" role="listitem">
+        <div class="mechanism-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg>
+        </div>
+        <p class="mechanism-card__title">Segurança e conforto</p>
+        <p class="mechanism-card__text">Exame indolor, seguro e não invasivo, indicado inclusive para acompanhamento contínuo sem riscos ao paciente.</p>
+      </div>
+    </div>
+
+    <p class="body-lg" style="color:var(--text-muted);margin-top:40px;max-width:760px">
+      Além de auxiliar no diagnóstico, o exame apoia o planejamento cirúrgico e o acompanhamento pós-operatório, detectando alterações funcionais e estruturais da córnea antes que comprometam a visão.
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════════════ 05 · PERGUNTAS FREQUENTES ═══════════════════ -->
 <section class="faq-section" aria-label="Perguntas frequentes">
   <div class="faq-wrap">
     <div class="faq-heading">
@@ -360,52 +304,43 @@
     <div class="faq-list" id="faqList">
       <div class="faq-item is-open">
         <button class="faq-question" id="faq-q-0" aria-expanded="true" aria-controls="faq-a-0" type="button">
-          <span>O tratamento dói?</span>
+          <span>A microscopia confocal dói?</span>
           <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
         </button>
         <div class="faq-answer-wrap" id="faq-a-0" role="region" aria-labelledby="faq-q-0">
-          <div class="faq-answer"><p>A maioria dos procedimentos é indolor ou causa apenas um leve desconforto temporário. A equipe explica cada etapa antes de iniciar e ajusta o atendimento ao nível de conforto do paciente.</p></div>
+          <div class="faq-answer"><p>Não. O exame é indolor: antes de começar, aplica-se um colírio anestésico e o contato do microscópio com a córnea é feito de forma suave, com auxílio de gel estéril.</p></div>
         </div>
       </div>
       <div class="faq-item">
         <button class="faq-question" id="faq-q-1" aria-expanded="false" aria-controls="faq-a-1" type="button">
-          <span>Quanto tempo dura o efeito?</span>
+          <span>Quanto tempo demora o exame?</span>
           <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
         </button>
         <div class="faq-answer-wrap" id="faq-a-1" role="region" aria-labelledby="faq-q-1">
-          <div class="faq-answer"><p>Estudos indicam melhora sintomática sustentada por até 12 meses após o protocolo completo, mas a duração varia de pessoa para pessoa, o que geralmente justifica sessões de manutenção periódicas.</p></div>
+          <div class="faq-answer"><p>Em média, de 10 a 15 minutos, com resultado avaliado em imagens de alta resolução no mesmo momento do exame.</p></div>
         </div>
       </div>
       <div class="faq-item">
         <button class="faq-question" id="faq-q-2" aria-expanded="false" aria-controls="faq-a-2" type="button">
-          <span>Qual o melhor tratamento para olho seco?</span>
+          <span>Quem precisa fazer esse exame?</span>
           <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
         </button>
         <div class="faq-answer-wrap" id="faq-a-2" role="region" aria-labelledby="faq-q-2">
-          <div class="faq-answer"><p>Não existe um único melhor tratamento — o que funciona depende da causa (falta de água na lágrima, falta de gordura, inflamação, etc.) e da gravidade do caso, por isso a avaliação com um oftalmologista especialista é muito importante.</p></div>
+          <div class="faq-answer"><p>É indicado sobretudo para pacientes com desconforto ocular persistente, usuários de lentes de contato, suspeita de infecção corneana, distrofias hereditárias ou olho seco severo. A indicação é sempre feita após avaliação com o oftalmologista.</p></div>
         </div>
       </div>
       <div class="faq-item">
         <button class="faq-question" id="faq-q-3" aria-expanded="false" aria-controls="faq-a-3" type="button">
-          <span>Quais tecnologias são usadas para tratar olho seco?</span>
+          <span>A microscopia confocal substitui outros exames de córnea?</span>
           <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
         </button>
         <div class="faq-answer-wrap" id="faq-a-3" role="region" aria-labelledby="faq-q-3">
-          <div class="faq-answer"><p>Além do tradicional uso de colírios, hoje existem equipamentos e exames de alta tecnologia com tratamento mais direcionado, incluindo Luz Intensa Pulsada (IPL), termopulsação com radiofrequência, lentes esclerais, tampões lacrimais, soro autólogo e colírios de última geração.</p></div>
-        </div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question" id="faq-q-4" aria-expanded="false" aria-controls="faq-a-4" type="button">
-          <span>Como funciona o tratamento IPL para tratar olho seco?</span>
-          <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
-        </button>
-        <div class="faq-answer-wrap" id="faq-a-4" role="region" aria-labelledby="faq-q-4">
-          <div class="faq-answer"><p>O IPL funciona melhor quando o olho seco é causado por disfunções das glândulas de Meibômio — por isso a avaliação com exames específicos garante que o tratamento resolva a causa do problema, e não apenas alivie o sintoma temporariamente.</p></div>
+          <div class="faq-answer"><p>Não substitui, mas complementa. Ela fornece um nível de detalhe celular que outros exames não alcançam, sendo especialmente útil quando há suspeita de alterações não visíveis nos exames convencionais.</p></div>
         </div>
       </div>
     </div>
     <div class="faq-cta">
-      <p class="body-sm" style="color:var(--text-muted)">Ainda tem dúvidas sobre o IPL?</p>
+      <p class="body-sm" style="color:var(--text-muted)">Ainda tem dúvidas sobre a microscopia confocal?</p>
       <div class="faq-cta-buttons">
         <a class="faq-btn-primary" href="https://wa.me/5511945594832?text=Quero%20agendar%20uma%20consulta" target="_blank" rel="noopener">Agendar consulta</a>
         <a class="faq-btn-secondary" href="tel:+5511945594832">(11) 94559-4832</a>
@@ -414,27 +349,8 @@
   </div>
 </section>
 
-<!-- ═══════════════════ 07 · REFERÊNCIAS ═══════════════════ -->
-<section class="section section--off" aria-labelledby="refs-title">
-  <div class="container">
-    <div class="section-num-head">
-      <span class="section-num">07</span>
-      <h2 class="display display-lg" id="refs-title" style="color:var(--navy)">Referências científicas</h2>
-    </div>
-
-    <ol class="refs-list" style="margin-top:32px">
-      <li><span class="refs-num">1.</span><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7388499/" target="_blank" rel="noopener">PubMed Central — pmc.ncbi.nlm.nih.gov/articles/PMC7388499</a></li>
-      <li><span class="refs-num">2.</span><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6802620/" target="_blank" rel="noopener">PubMed Central — pmc.ncbi.nlm.nih.gov/articles/PMC6802620</a></li>
-      <li><span class="refs-num">3.</span><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7077992/" target="_blank" rel="noopener">PubMed Central — pmc.ncbi.nlm.nih.gov/articles/PMC7077992</a></li>
-      <li><span class="refs-num">4.</span><a href="https://onlinelibrary.wiley.com/doi/full/10.1111/aos.15759" target="_blank" rel="noopener">Wiley — Acta Ophthalmologica, doi/10.1111/aos.15759</a></li>
-      <li><span class="refs-num">5.</span><a href="https://www.accessdata.fda.gov/cdrh_docs/reviews/DEN200028.pdf" target="_blank" rel="noopener">FDA — documento regulatório DEN200028</a></li>
-      <li><span class="refs-num">6.</span><a href="https://www.sciencedirect.com/science/article/pii/S1542012420300" target="_blank" rel="noopener">ScienceDirect — artigo científico</a></li>
-    </ol>
-  </div>
-</section>
-
 <!-- ═══════════════════ AUTORIA ═══════════════════ -->
-<section class="section" aria-label="Sobre a autora">
+<section class="section" aria-label="Sobre a revisão do conteúdo">
   <div class="container">
     <div class="author-box">
       <div class="author-box__avatar" aria-hidden="true">B</div>
@@ -456,13 +372,13 @@
     <div class="cta-final__inner">
       <p class="label">Dê o primeiro passo</p>
       <h2 class="display display-lg cta-final__title" id="cta-title" style="margin-top:12px">
-        Quer saber se o IPL é indicado para o seu caso?
+        Precisa avaliar a saúde da sua córnea?
       </h2>
       <p class="cta-final__sub">
-        Agende uma avaliação da superfície ocular e descubra o protocolo mais adequado para o seu tipo de olho seco.
+        Agende uma consulta e descubra se a microscopia confocal é indicada para o seu caso.
       </p>
       <div class="cta-final__actions">
-        <a href="https://wa.me/5511945594832?text=Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20IPL" class="btn btn-primary btn-lg" target="_blank" rel="noopener">
+        <a href="https://wa.me/5511945594832?text=Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20microscopia%20confocal" class="btn btn-primary btn-lg" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.557 4.124 1.527 5.855L.057 23.882a.5.5 0 00.61.61l6.122-1.527A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.956 0-3.785-.559-5.33-1.527l-.383-.228-3.975.992.992-3.975-.228-.383A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
           Agende sua consulta
         </a>
